@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A framework for spatial analysis of extremely large astronomical surveys in HATS format">
+  <title>LSDB</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#012970">
+  <link rel="manifest" href="assets/img/site.webmanifest">
+  <meta name="msapplication-config" content="assets/img/browserconfig.xml">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CNunito:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="gaia-bg" aria-hidden="true"></div>
+
+  <div id="page-wrapper">
+  <header class="site-header sticky-top">
+    <nav class="navbar container-fluid px-4">
+      <a class="lsdb-brand navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/logo.webp" alt="LSDB logo">
+        <span class="fw-bold ms-2">LSDB</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="hero" class="hero-section">
+      <div class="container-fluid page-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h1 class="hero-title">LSDB</h1>
+            <p class="hero-subtitle">A python tool for scalable analysis of large catalogs.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="https://github.com/astronomy-commons/lsdb/" class="btn-lsdb btn-lsdb-blue">
+                Source code
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="height:1.5rem;display:block;flex-shrink:0;" aria-hidden="true">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+              <a href="https://lsdb.readthedocs.io/en/latest/" class="btn btn-primary d-flex align-items-center gap-2">
+                Documentation
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="height:1.5rem;display:block;flex-shrink:0;" aria-hidden="true">
+                  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
+                  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/watch?v=yoGhI72Vl40" class="btn-lsdb btn-lsdb-green">
+                Tech Talks
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height:1.5rem;display:block;flex-shrink:0;" aria-hidden="true">
+                  <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+                  <path fill="#FFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="content-card">
+              <p class="section-eyebrow">Installation</p>
+
+              <p class="section-body mb-2">Install the latest release version via <a href="https://anaconda.org/conda-forge/lsdb/">conda</a>:</p>
+              <div class="code-block mb-4">
+                <code><span class="tk-prompt">$ </span><span class="tk-cmd">conda install</span> conda-forge::lsdb</code>
+              </div>
+
+              <p class="section-body mb-2">Or, if preferred, via <a href="https://pypi.org/project/lsdb/">pip</a>:</p>
+              <div class="code-block">
+                <code><span class="tk-prompt">$ </span><span class="tk-cmd">pip install</span> lsdb</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <i class="bi bi-arrow-down-short"></i>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="content-section">
+      <div class="container-fluid page-container">
+        <div class="content-card">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <p class="section-eyebrow">What is LSDB</p>
+              <h2 class="section-title">A framework for spatial analysis of extremely large astronomical surveys</h2>
+              <p class="section-body">
+                Designed to enable querying and crossmatching of O(1B) sources. It addresses large-scale data processing challenges, in particular those brought up by LSST.
+              </p>
+              <p class="section-body">
+                Built on top of Dask to efficiently scale and parallelize operations across multiple workers, it leverages the <a href="https://hats.readthedocs.io/en/stable/">HATS</a> data format for surveys in a partitioned HEALPix (Hierarchical Equal Area isoLatitude Pixelization) structure.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="img-toggle-wrapper">
+                <div class="code-tabs">
+                  <button class="code-tab active" data-target="about-img-points">Point density map</button>
+                  <button class="code-tab" data-target="about-img-hats">HATS partition map</button>
+                </div>
+                <img id="about-img-points" class="toggle-img img-fluid" src="assets/img/gaia-points.webp" alt="Gaia point density">
+                <img id="about-img-hats" class="toggle-img img-fluid" src="assets/img/gaia-pixels.webp" alt="HATS partitioning schema for Gaia DR3" style="display:none;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage + Catalogs -->
+    <section id="usage" class="content-section">
+      <div class="container-fluid page-container">
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="content-card h-100">
+              <p class="section-eyebrow">Usage</p>
+              <h2 class="section-title">Your first crossmatch</h2>
+              <p class="section-body mb-2">Import the package, read two catalogs and perform their crossmatch:</p>
+              <div class="code-block mb-4"><code><span class="tk-prompt">&gt;&gt;&gt; </span><span class="tk-kw">import</span> lsdb
+
+<span style="color:#9ca3af;"># Read the Gaia DR3 object catalog</span>
+<span class="tk-prompt">&gt;&gt;&gt; </span>gaia = lsdb.<span class="tk-fn">open_catalog</span>(gaia_path)
+
+<span style="color:#9ca3af;"># Read the ZTF DR22 object catalog</span>
+<span class="tk-prompt">&gt;&gt;&gt; </span>ztf = lsdb.<span class="tk-fn">open_catalog</span>(ztf_path)
+
+<span style="color:#9ca3af;"># Crossmatch the two catalogs</span>
+<span class="tk-prompt">&gt;&gt;&gt; </span>ztf.<span class="tk-fn">crossmatch</span>(gaia, n_neighbors=<span class="tk-str">1</span>, radius_arcsec=<span class="tk-str">1</span>)</code></div>
+              <p class="section-body">For advanced use cases, please have a look at our <a href="https://lsdb.readthedocs.io/en/stable/tutorials.html">tutorials</a>.</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="content-card h-100 d-flex flex-column">
+              <p class="section-eyebrow">Discover service for LSDB Surveys</p>
+              <h2 class="section-title">data.lsdb.io</h2>
+              <p class="section-body section-body--lead">
+                Hosted by <a href="https://dirac.astro.washington.edu">DiRAC @ UW</a>
+              </p>
+              <p class="section-body mt-3 mb-4">
+                The Institute for Data Intensive Research in Astrophysics &amp; Cosmology hosts a collection of survey catalogs in HATS format. Among them are catalogs from Vera C. Rubin, Euclid, Zwicky Transient Facility, Gaia and many others. They are available to the community.
+              </p>
+              <div>
+                <a href="https://data.lsdb.io" class="btn-lsdb btn-lsdb-blue">
+                  Access surveys
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-fluid page-container">
+      <div class="row align-items-start">
+        <div class="col">
+          <img src="assets/img/lincc-logo.webp" alt="LINCC logo" class="footer-logo">
+          <p class="footer-text">
+            This project is supported by Schmidt Sciences.
+            This project is based upon work supported by the National Science Foundation under Grant No. AST-2003196.
+            This project acknowledges support from the DIRAC Institute in the Department of Astronomy at the University of Washington.
+            The DIRAC Institute is supported through generous gifts from the Charles and Lisa Simonyi Fund for Arts and Sciences, and the Washington Research Foundation.
+          </p>
+        </div>
+        <div class="col-12 col-sm-auto">
+          <p class="footer-collab-title">Interested in collaborating with us?</p>
+          <a href="https://groups.google.com/g/hats-wg" class="btn-lsdb btn-lsdb-green">
+            Join our working group
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div><!-- #page-wrapper -->
+
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 300);
+    });
+
+    document.querySelectorAll('.code-tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        const wrapper = this.closest('.img-toggle-wrapper');
+        wrapper.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        wrapper.querySelectorAll('.toggle-img').forEach(img => img.style.display = 'none');
+        document.getElementById(this.dataset.target).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
