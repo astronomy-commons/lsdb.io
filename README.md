@@ -13,5 +13,5 @@ Links:
 To deploy the website, copy the contents of this repository to `/var/www/lsdb.io` on Epyc:
 
 ```
-$ scp -r ./* <username>@epyc.astro.washington.edu:/var/www/lsdb.io/html
+scp -r ./* <username>@epyc.astro.washington.edu:/var/www/lsdb.io/html
 ```
