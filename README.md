@@ -1,3 +1,5 @@
+<img src="https://github.com/astronomy-commons/lsdb/blob/main/docs/lincc-logo.png?raw=true" width="300" height="100">
+
 # lsdb.io
 
 Source code for the lsdb.io website.
@@ -15,3 +17,7 @@ To deploy the website, copy the contents of this repository to `/var/www/lsdb.io
 ```
 scp -r ./* <username>@epyc.astro.washington.edu:/var/www/lsdb.io/html
 ```
+
+## Acknowledgements
+
+This project is supported by Schmidt Sciences.
